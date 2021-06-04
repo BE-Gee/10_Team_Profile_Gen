@@ -1,0 +1,22 @@
+{
+  "name": "10_team_profile_gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BE-Gee/10_Team_Profile_Gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BE-Gee/10_Team_Profile_Gen/issues"
+  },
+  "homepage": "https://github.com/BE-Gee/10_Team_Profile_Gen#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
+}
