@@ -16,9 +16,27 @@ function start() {
         message: "Add employee email",
       },
       {
+        type: "list",
+        name: "role",
+        message: "What is their role?",
+        choices: ["Intern", "Engineer"],
+        // filter(val) {
+        //return val.toLowerCase();
+      },
+      {
+        type: "input",
+        name: "office",
+        message: "What is their office number?",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "What is their ID?",
+      },
+      {
         type: "confirm",
         name: "finish",
-        message: "Would you like to add another",
+        message: "Would you like to add another?",
       },
     ])
     .then((answers) => {
@@ -58,7 +76,11 @@ function buildPage(team) {
             <div class="team-area col-12 d-flex justify-content-center">
                 ${team.map((employee) => {
                   return `<div>${employee.employeeName}<div/>
-                  <div> ${employee.email}<div?>`;
+                  <div> ${employee.role}<div/>
+                  <div> ${employee.id}<div/>
+                  <div> ${employee.email}<div/>
+                  <div> ${employee.role}<div/>
+                  <br><br/>`;
                 })}
             </div>
         </div>
