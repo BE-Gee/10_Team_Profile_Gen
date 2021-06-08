@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+const emp = require("./lib/employee.js");
 const employee = [];
 function start() {
   inquirer
@@ -40,7 +41,15 @@ function start() {
       },
     ])
     .then((answers) => {
-      employee.push(answers);
+      employee.push(
+        new emp(
+          answers.employeeName,
+          answers.id,
+          answers.email,
+          answers.role,
+          answers.office
+        )
+      );
       if (answers.finish) {
         start();
       } else {
@@ -79,8 +88,7 @@ function buildPage(team) {
                   <div> ${employee.role}<div/>
                   <div> ${employee.id}<div/>
                   <div> ${employee.email}<div/>
-                  <div> ${employee.role}<div/>
-                  <br><br/>`;
+                  <div> ${employee.role}<br/><div/>`;
                 })}
             </div>
         </div>
